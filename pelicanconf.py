@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Lei Li'
 SITENAME = 'SciLife'
 SITEURL = ''
+CC_LICENSE = 'CC-BY-NC-SA'
 
 PATH = 'content'
 
