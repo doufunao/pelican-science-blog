@@ -4,6 +4,7 @@ title: draft test
 published: false
 categories: ['test', 'it']
 tags: ['test', 'tagtest']
+status: draft
 ---
 #Tags and Categories Test
 

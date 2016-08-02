@@ -11,6 +11,9 @@ categories: ['Tutorials','Notes']
 - [启发]( #start )
 - [添加location字段]( #trial-step01 )
 - [在文章中显示location]( #trial-step02 )
+
+<!--break-->
+
 ##启发 { #start }
 
 在写博客的时候可以预先定义几个字段，比如title，date，layout等
@@ -22,7 +25,6 @@ categories: ['Tutorials','Notes']
 我就想着，那我再增加一个地点呗。
 走起~
 
-<!--break-->
 ##添加locatioin字段 { #trial-step01 }
 
 首先，在yaml的定义里直接加上location:loc

@@ -8,6 +8,7 @@ location: BITlab
 ---
 之前由于windows下的编码问题，转用unbutu系统。
 今天由于必须使用windows server运行程序，又开始尝试解决编码问题。
+<!-- break -->
 
 报错提示：
 
@@ -26,7 +27,6 @@ location: BITlab
 
 报错代码为第6行, 代码仅为示意
 
-<!--break-->
 
 ###探索
 
