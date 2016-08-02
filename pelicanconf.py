@@ -6,8 +6,9 @@ AUTHOR = 'Lei Li'
 SITENAME = 'SciLife'
 SITEURL = ''
 CC_LICENSE = 'CC-BY-NC-SA'
-
+DEFAULT_CATEGORY = 'BlaBla'
 PATH = 'content'
+OUTPUT_PATH = 'output/'
 
 TIMEZONE = 'Asia/Shanghai'
 
@@ -33,14 +34,42 @@ AUTHOR_FEED_RSS = None
 #           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+PLUGINS = ['summary']
+PLUGIN_PATHS = ['pelican-plugins/summary']
+SUMMARY_END_MARKER = "<!--break-->"
+SUMMARY_USE_FIRST_PARAGRAPH = True
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-# THEME = 'pelican-themes/simple-bootstrap'
-THEME = 'pelican-bootstrap3-dev'
-BOOTSTRAP_THEME = 'cosmo'
 
 # Sidebar
 # HIDE_SIDEBAR = True
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+
+# Publish Setting
+ARTICLE_URL = 'posts/{category}/{date:%Y}/{date:%m}-{date:%d}-{slug}/'
+ARTICLE_SAVE_AS = 'posts/{category}/{date:%Y}/{date:%m}-{date:%d}-{slug}/index.html'
+
+# Pygments Setting for Markdown
+MD_EXTENSIONS = ['fenced_code', 'codehilite(css_class=highlight)', 'extra']
+
+# Pytgments style set by Bootstrap3
+PYGMENTS_STYLE = "monokai"
+
+# Tell Pelican to add 'extra/custom.css' to the output dir
+STATIC_PATHS = ['assets', 'extra']
+
+#################
+# Theme Related #
+#################
+# THEME = 'pelican-themes/simple-bootstrap'
+THEME = 'pelican-bootstrap3-dev'
+BOOTSTRAP_THEME = 'cosmo'
+# DISPLAY_ARTICLE_INFO_ON_INDEX = True
+# Tell Pelican to change the path to 'static/custom.css' in the output dir
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'}
+}
+
+CUSTOM_CSS = 'static/custom.css'
