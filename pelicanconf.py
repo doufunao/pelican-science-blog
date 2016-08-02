@@ -51,6 +51,11 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 ARTICLE_URL = 'posts/{category}/{date:%Y}/{date:%m}-{date:%d}-{slug}/'
 ARTICLE_SAVE_AS = 'posts/{category}/{date:%Y}/{date:%m}-{date:%d}-{slug}/index.html'
 
+# The URL to refer to an article draft.
+DRAFT_URL = 'drafts/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'	
+DRAFT_SAVE_AS = 'drafts/{date:%Y}-{date:%m}-{date:%d}-{slug}.html'
+
+
 # Pygments Setting for Markdown
 MD_EXTENSIONS = ['fenced_code', 'codehilite(css_class=highlight)', 'extra']
 
