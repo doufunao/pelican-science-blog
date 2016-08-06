@@ -40,7 +40,7 @@ SUMMARY_END_MARKER = "<!--break-->"
 SUMMARY_USE_FIRST_PARAGRAPH = True
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 
 # Sidebar
