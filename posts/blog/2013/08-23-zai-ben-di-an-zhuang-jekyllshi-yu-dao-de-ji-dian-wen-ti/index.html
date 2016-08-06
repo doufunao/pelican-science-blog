@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="cn" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>在本地安装Jekyll时遇到的几点问题 - SciLife</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="../../../../posts/blog/2013/08-23-zai-ben-di-an-zhuang-jekyllshi-yu-dao-de-ji-dian-wen-ti/">
+
+        <meta name="author" content="Lei Li" />
+        <meta name="keywords" content="['Jekyll','paginator','jekyllrb.com']" />
+        <meta name="description" content="遇到的问题做个记录~ 1.每修改一次_config.yml文件都要重新运行jekyll serve一次 为了实现分页的功能，需要在_config.yml里设置paginate的值，比如 paginate: 10 表示每页显示十个post 2.paginator这个参数只能在index.html里调用 还是为了实现分页功能，整了半天才发现这个问题，其实在jekyllrb.com里已有提示(Tips)。 3.如何解决首行空两个格的问题 解决办法：修改CSS，找到P的CSS属性定义，加入text-indent: 2em;就ok了。例如： .post p{ text-indent: 2em; } 4.首页显示摘要的问题 1)paginator变量只能用在index.html的页面中 在Jekyll中生成post列表，主要用的是paginator变量，但是并不是所有页面都可以使用，只有在index.html的页面中才能调用这个变量。当时查了好久，最后发现其实jekyllrb.com上早有提示。生成列表的代码： {% for ..." />
+
+        <meta property="og:site_name" content="SciLife" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="在本地安装Jekyll时遇到的几点问题"/>
+        <meta property="og:url" content="../../../../posts/blog/2013/08-23-zai-ben-di-an-zhuang-jekyllshi-yu-dao-de-ji-dian-wen-ti/"/>
+        <meta property="og:description" content="遇到的问题做个记录~ 1.每修改一次_config.yml文件都要重新运行jekyll serve一次 为了实现分页的功能，需要在_config.yml里设置paginate的值，比如 paginate: 10 表示每页显示十个post 2.paginator这个参数只能在index.html里调用 还是为了实现分页功能，整了半天才发现这个问题，其实在jekyllrb.com里已有提示(Tips)。 3.如何解决首行空两个格的问题 解决办法：修改CSS，找到P的CSS属性定义，加入text-indent: 2em;就ok了。例如： .post p{ text-indent: 2em; } 4.首页显示摘要的问题 1)paginator变量只能用在index.html的页面中 在Jekyll中生成post列表，主要用的是paginator变量，但是并不是所有页面都可以使用，只有在index.html的页面中才能调用这个变量。当时查了好久，最后发现其实jekyllrb.com上早有提示。生成列表的代码： {% for ..."/>
+        <meta property="article:published_time" content="2013-08-23" />
+            <meta property="article:section" content="Blog" />
+            <meta property="article:tag" content="['Jekyll'" />
+            <meta property="article:tag" content="'paginator'" />
+            <meta property="article:tag" content="'jekyllrb.com']" />
+            <meta property="article:author" content="Lei Li" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../../../../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../../../../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../theme/css/style.css" type="text/css"/>
+        <link href="../../../../static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../../../" class="navbar-brand">
+SciLife            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../../../../pages/about.html">
+                             About
+                          </a></li>
+                        <li class="active">
+                            <a href="../../../../category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/links.html">Links</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../../../../posts/blog/2013/08-23-zai-ben-di-an-zhuang-jekyllshi-yu-dao-de-ji-dian-wen-ti/"
+                       rel="bookmark"
+                       title="Permalink to 在本地安装Jekyll时遇到的几点问题">
+                        在本地安装Jekyll时遇到的几点问题
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-08-23T17:27:00+08:00"> 2013-08-23 17:27</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../../../../tag/jekyll.html">['Jekyll'</a>
+        /
+	<a href="../../../../tag/paginator.html">'paginator'</a>
+        /
+	<a href="../../../../tag/jekyllrbcom.html">'jekyllrb.com']</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>遇到的问题做个记录~</p>
+<h2>1.每修改一次_config.yml文件都要重新运行jekyll serve一次</h2>
+<p>为了实现分页的功能，需要在_config.yml里设置paginate的值，比如</p>
+<div class="highlight"><pre><span></span><span class="n">paginate</span><span class="o">:</span> <span class="mi">10</span>
+</pre></div>
+
+
+<p>表示每页显示十个post</p>
+<h2>2.paginator这个参数只能在index.html里调用</h2>
+<p>还是为了实现分页功能，整了半天才发现这个问题，其实在jekyllrb.com里已有提示(Tips)。</p>
+<!--break-->
+
+<h2>3.如何解决首行空两个格的问题</h2>
+<p>解决办法：修改CSS，找到P的CSS属性定义，加入<code>text-indent: 2em;</code>就ok了。例如：</p>
+<div class="highlight"><pre><span></span><span class="na">.post</span> <span class="no">p</span><span class="err">{</span>
+    <span class="nl">text-indent:</span> <span class="err">2</span><span class="nf">em</span><span class="err">;</span>
+    <span class="err">}</span>
+</pre></div>
+
+
+<h2>4.首页显示摘要的问题</h2>
+<p>1)paginator变量只能用在index.html的页面中</p>
+<p>在Jekyll中生成post列表，主要用的是paginator变量，但是并不是所有页面都可以使用，只有在index.html的页面中才能调用这个变量。当时查了好久，最后发现其实jekyllrb.com上早有提示。生成列表的代码：</p>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">paginator.posts</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">post.title</span> <span class="cp">}}</span><span class="x">       &lt;!--输出博文的标题--&gt;</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">post.content</span> <span class="cp">}}</span><span class="x">     &lt;!--输出博文的正文--&gt;</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">post.date</span> <span class="cp">}}</span><span class="x">        &lt;!--输出博文的日期--&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>2)利用liquid的过滤器和注释标签实现段落摘要</p>
+<p>纯手工操作\(^o^)/~</p>
+<p>选取每页的前几段为摘要（你也可以选择指定的段落，不过在首页输出的时候就相对麻烦一些，但是基本方法相似），至于是哪几段自己决定。例，有段落一、段落二、段落三，把段落一作为摘要，其代码如下所示：</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>段落一<span class="nt">&lt;/p&gt;</span>
+<span class="c">&lt;!--break--&gt;</span>
+<span class="nt">&lt;p&gt;</span>段落二<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>段落三<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+
+
+<p><strong>也就是编辑博文时在文中的<code>段落一</code>与<code>段落二</code>之间加入<code>&lt;!--break--&gt;</code>。</strong>如果是在markdown文件中，就变成：</p>
+<div class="highlight"><pre><span></span>段落一
+
+&lt;!--break--&gt;
+
+段落二
+
+段落三
+</pre></div>
+
+
+<p>接下来开始编辑首页文件。插入文章列表的方法不说了，直接上代码。原来的代码是</p>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">paginator.posts</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">post.content</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>修改为</p>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">paginator.posts</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">post.content</span> <span class="o">|</span> <span class="nf">split</span><span class="s1">:&#39;&lt;!--break--&gt;&#39;</span> <span class="o">|</span> <span class="nf">first</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p><strong>也就是在"博文变量.content"后面加上 <code>| split:'&lt;!--break--&gt;' | first</code></strong></p>
+<p>ok，简易摘要完成。</p>
+<hr />
+<p>其他问题</p>
+<p>markdown的编译程序(processor)对于一些语句会报错，最后导致页面无法生成。其实现在还有点迷糊，难道markdown没有统一吗？在学markdown的时候用一些语句做测试，就会出现报错。</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">
+                            真是不能愉快地码字了
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/links/2016/07-31-statics-links/">
+                            Statics Links
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/review/2016/07-31-2016-07-31/">
+                            2016-07-31
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/07-31-pelican-cheet-list/">
+                            Pelican Cheet List
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2014/05-11-ling-ling-sui-sui/">
+                            零零碎碎
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Lei Li
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../../../../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../../../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../../../../theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cn" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Axure使用小体会及实现下拉菜单效果 - SciLife</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="../../../../posts/blog/2013/10-14-axureshi-yong-xiao-ti-hui-ji-shi-xian-xia-la-cai-dan-xiao-guo/">
+
+        <meta name="author" content="Lei Li" />
+        <meta name="keywords" content="['Axure','Prototype']" />
+        <meta name="description" content="目录 - 0 每次都要啰嗦一下 - 1 Axure使用体会 - 2 利用动态面板(Dynamic Panel)实现下拉菜单(Droplist)效果 - 3 效果展示 - 4 后记 0 每次都要啰嗦一下{ #t0 } 为了给boss完成任务，最近一直在用Axure做原型（虽然一直被一些骚年吐槽叫画界面233），两个月前一点没接触过，现在也算是有点小心得了，遂记之。 1 Axure使用体会{ #t1 } 在接触Axure本人没用过其它的原型设计软件，由于有过一点前端开发的经验。软件刚上手的时候，第一感觉就是，简洁、方便、清晰。对我而言，一些设计让我用得还是很自然舒服的。比如，控件(Widgets)和事件(Events)的名称跟html里是一样的，在拖拉控件的时候可以自动对齐，母板(Master)使得页面在设计的时候让我觉得条理清晰等等。还有，生成规格说明书的功能简直就是救星，哈哈 ..." />
+
+        <meta property="og:site_name" content="SciLife" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Axure使用小体会及实现下拉菜单效果"/>
+        <meta property="og:url" content="../../../../posts/blog/2013/10-14-axureshi-yong-xiao-ti-hui-ji-shi-xian-xia-la-cai-dan-xiao-guo/"/>
+        <meta property="og:description" content="目录 - 0 每次都要啰嗦一下 - 1 Axure使用体会 - 2 利用动态面板(Dynamic Panel)实现下拉菜单(Droplist)效果 - 3 效果展示 - 4 后记 0 每次都要啰嗦一下{ #t0 } 为了给boss完成任务，最近一直在用Axure做原型（虽然一直被一些骚年吐槽叫画界面233），两个月前一点没接触过，现在也算是有点小心得了，遂记之。 1 Axure使用体会{ #t1 } 在接触Axure本人没用过其它的原型设计软件，由于有过一点前端开发的经验。软件刚上手的时候，第一感觉就是，简洁、方便、清晰。对我而言，一些设计让我用得还是很自然舒服的。比如，控件(Widgets)和事件(Events)的名称跟html里是一样的，在拖拉控件的时候可以自动对齐，母板(Master)使得页面在设计的时候让我觉得条理清晰等等。还有，生成规格说明书的功能简直就是救星，哈哈 ..."/>
+        <meta property="article:published_time" content="2013-10-14" />
+            <meta property="article:section" content="Blog" />
+            <meta property="article:tag" content="['Axure'" />
+            <meta property="article:tag" content="'Prototype']" />
+            <meta property="article:author" content="Lei Li" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../../../../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../../../../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../theme/css/style.css" type="text/css"/>
+        <link href="../../../../static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../../../" class="navbar-brand">
+SciLife            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../../../../pages/about.html">
+                             About
+                          </a></li>
+                        <li class="active">
+                            <a href="../../../../category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/links.html">Links</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../../../../posts/blog/2013/10-14-axureshi-yong-xiao-ti-hui-ji-shi-xian-xia-la-cai-dan-xiao-guo/"
+                       rel="bookmark"
+                       title="Permalink to Axure使用小体会及实现下拉菜单效果">
+                        Axure使用小体会及实现下拉菜单效果
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-10-14T18:23:00+08:00"> 2013-10-14 18:23</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../../../../tag/axure.html">['Axure'</a>
+        /
+	<a href="../../../../tag/prototype.html">'Prototype']</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>目录
+- <a href="#t0">0 每次都要啰嗦一下</a>
+- <a href="#t1">1 Axure使用体会</a>
+- <a href="#t2">2 利用动态面板(Dynamic Panel)实现下拉菜单(Droplist)效果</a>
+- <a href="#t3">3 效果展示</a>
+- <a href="#t4">4 后记</a></p>
+<h3>0 每次都要啰嗦一下{ #t0 }</h3>
+<p>为了给boss完成任务，最近一直在用Axure做原型（虽然一直被一些骚年吐槽叫画界面233），两个月前一点没接触过，现在也算是有点小心得了，遂记之。</p>
+<!--break-->
+
+<h3>1 Axure使用体会{ #t1 }</h3>
+<p>在接触Axure本人没用过其它的原型设计软件，由于有过一点前端开发的经验。软件刚上手的时候，第一感觉就是，简洁、方便、清晰。对我而言，一些设计让我用得还是很自然舒服的。比如，控件(Widgets)和事件(Events)的名称跟html里是一样的，在拖拉控件的时候可以自动对齐，母板(Master)使得页面在设计的时候让我觉得条理清晰等等。还有，生成规格说明书的功能简直就是救星，哈哈。</p>
+<p>至于不好的地方多在于对于现有功能的不满足：比如一些动态交互的实现比较纠结、一些html里只需要给属性赋值的功能在Axure里反而很麻烦。</p>
+<p>Axure在原型设计领域里也算是有些名气的软件了~不多说了，用过你就知道~</p>
+<h3>2 利用动态面板(Dynamic Panel)实现下拉菜单(Droplist)效果{ #t2 }</h3>
+<p>Droplist是个很常用的控件，而Axure在他的Widgets里也已经定义了这个控件，那么为什么我还要做这个呢？原因很简单。在Axure里，Droplist这个控件不能自定义样式。。。</p>
+<h4>制作开始</h4>
+<p>1.在页面中拖入一个Heading 2(标题2)和一个Table(表格)的Widgets。这里Heading 2就相当于Droplist的选择部分，而Table相当于下拉列表的部分。</p>
+<p><img alt="图1" src="/assets/2013-10-17_Axure1.png" /></p>
+<p>2.把Table处理一下变为一列三行</p>
+<p><img alt="图2" src="/assets/2013-10-17_Axure2.png" /></p>
+<p>3.选中Heading 2和Table，将其转换为Dynamic Panel(动态面板)，为动态面板起个名字叫DP_下拉菜单。然后进入动态面板的state1(状态1)。</p>
+<p><img alt="图3" src="/assets/2013-10-17_Axure3.png" /></p>
+<p><img alt="图4" src="/assets/2013-10-17_Axure4.png" /></p>
+<p><img alt="图5" src="/assets/2013-10-17_Axure5.png" /></p>
+<p>4.先将Table转换为动态面板，为其起名为DP_下拉选项，然后回到DP_下拉菜单的state1，将DP_下拉选项的Visible(可见性)设置为不可见。不可见效果如下图所示。</p>
+<p><img alt="图6_1" src="/assets/2013-10-17_Axure9.png" /></p>
+<p><img alt="图6_2" src="/assets/2013-10-17_Axure6.png" /></p>
+<p>5.回到DP_下拉菜单的State1，选择Heading 2，在屏幕最右侧的交互面板中双击OnMouseEnter(鼠标移入时)。在打开的Case Editor(用例编辑器)中，选择Show-&gt;DP_下拉选项，如图所示。</p>
+<p><img alt="图7_1" src="/assets/2013-10-17_Axure7.png" /></p>
+<p><img alt="图7_2" src="/assets/2013-10-17_Axure11.png" /></p>
+<p>6.回到页面(Home)中，选择DP_下来菜单，在交互面板中点击More Events，找到OnMouseOut，单击。在Case Editor中，选择Hide-&gt;DP_下拉选项，如图所示。</p>
+<p><img alt="图8" src="/assets/2013-10-17_Axure12.png" /></p>
+<p><img alt="图9" src="/assets/2013-10-17_Axure13.png" /></p>
+<p><img alt="图10" src="/assets/2013-10-17_Axure14.png" /></p>
+<p>7.好了，完成！</p>
+<h3>3 效果展示{ #t3 }</h3>
+<p>效果如下图所示</p>
+<video loop="loop" autoplay="autoplay" src="/assets/2013-10-17_Axure1.mp4">对不起，您的浏览器不支持Video标签</video>
+
+<p>稍微加点style和交互效果，感觉就不一样了</p>
+<video loop="loop" autoplay="autoplay" src="/assets/2013-10-17_Axure2.mp4">对不起，您的浏览器不支持Video标签</video>
+
+<h3>4 后记{ #t4 }</h3>
+<p>我用Axure的时间还是少了点，但是Axure确实是一款能提高原型设计效率的软件，对于页面多而杂的BS系统而言Axure非常合适。</p>
+<p>PS.最后效果展示的部分利用了<a href="http://www.dvdvideosoft.com/cn/products/dvd/Free-Screen-Video-Recorder.htm">Free Screen Video Recorder</a>和<a href="http://www.dvdvideosoft.com/cn/products/dvd/Free-HTML5-Video-Player-and-Converter.htm">Free HTML5 Video Player and Converter</a>两款软件把录制好的视频文件转换成了浏览器适用的mp4文件,<strong>简单粗暴的方法233</strong>。然后直接在md里写上html代码，即可实现在md里插入视频：</p>
+<div class="highlight"><pre><span></span>&lt;video loop=&quot;loop&quot; autoplay=&quot;autoplay&quot; src=&quot;/assets/2013-10-17_Axure1.mp4&quot;&gt;
+</pre></div>
+
+
+<p>大功告成，over。</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">
+                            真是不能愉快地码字了
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/links/2016/07-31-statics-links/">
+                            Statics Links
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/review/2016/07-31-2016-07-31/">
+                            2016-07-31
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/07-31-pelican-cheet-list/">
+                            Pelican Cheet List
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2014/05-11-ling-ling-sui-sui/">
+                            零零碎碎
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Lei Li
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../../../../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../../../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../../../../theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

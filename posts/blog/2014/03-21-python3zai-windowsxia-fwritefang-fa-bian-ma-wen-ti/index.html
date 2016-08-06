@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="cn" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Python3在Windows下f.write()方法编码问题 - SciLife</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="../../../../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/">
+
+        <meta name="author" content="Lei Li" />
+        <meta name="keywords" content="['python3','windows','code error']" />
+        <meta name="description" content="之前由于windows下的编码问题，转用unbutu系统。 今天由于必须使用windows server运行程序，又开始尝试解决编码问题。 报错提示： UnicodeEncodeError: &#39;gbk&#39; codec can&#39;t encode character &#39;\xa0&#39; in position 967: illegal multibyte sequence 出错代码： 1 2 3 4 5 6request = urllib.request.Request(urlstr) fp = urllib.request.urlopen(request) content = fp.read() c = content.decode(&#39;utf-8&#39;) f = open(&#39;test&#39;, &#39;w&#39;) f.write ..." />
+
+        <meta property="og:site_name" content="SciLife" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Python3在Windows下f.write()方法编码问题"/>
+        <meta property="og:url" content="../../../../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/"/>
+        <meta property="og:description" content="之前由于windows下的编码问题，转用unbutu系统。 今天由于必须使用windows server运行程序，又开始尝试解决编码问题。 报错提示： UnicodeEncodeError: &#39;gbk&#39; codec can&#39;t encode character &#39;\xa0&#39; in position 967: illegal multibyte sequence 出错代码： 1 2 3 4 5 6request = urllib.request.Request(urlstr) fp = urllib.request.urlopen(request) content = fp.read() c = content.decode(&#39;utf-8&#39;) f = open(&#39;test&#39;, &#39;w&#39;) f.write ..."/>
+        <meta property="article:published_time" content="2014-03-21" />
+            <meta property="article:section" content="Blog" />
+            <meta property="article:tag" content="['python3'" />
+            <meta property="article:tag" content="'windows'" />
+            <meta property="article:tag" content="'code error']" />
+            <meta property="article:author" content="Lei Li" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../../../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../../../../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../../../../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../theme/css/style.css" type="text/css"/>
+        <link href="../../../../static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../../../../" class="navbar-brand">
+SciLife            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../../../../pages/about.html">
+                             About
+                          </a></li>
+                        <li class="active">
+                            <a href="../../../../category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/links.html">Links</a>
+                        </li>
+                        <li >
+                            <a href="../../../../category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../../../../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/"
+                       rel="bookmark"
+                       title="Permalink to Python3在Windows下f.write()方法编码问题">
+                        Python3在Windows下f.write()方法编码问题
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-03-21T14:01:00+08:00"> 2014-03-21 14:01</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../../../../tag/python3.html">['python3'</a>
+        /
+	<a href="../../../../tag/windows.html">'windows'</a>
+        /
+	<a href="../../../../tag/code-error.html">'code error']</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>之前由于windows下的编码问题，转用unbutu系统。
+今天由于必须使用windows server运行程序，又开始尝试解决编码问题。
+<!-- break --></p>
+<p>报错提示：</p>
+<div class="highlight"><pre><span></span><span class="go">UnicodeEncodeError: &#39;gbk&#39; codec can&#39;t encode character &#39;\xa0&#39; in position 967: </span>
+<span class="go">illegal multibyte sequence</span>
+</pre></div>
+
+
+<p>出错代码：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">urlstr</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>报错代码为第6行, 代码仅为示意</p>
+<h3>探索</h3>
+<p><strong>第一步：</strong></p>
+<div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>修改为</p>
+<div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;gbk&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>仍然是相同的错误</p>
+<p>失败</p>
+<p><strong>第二步：</strong>
+添加'ignore'参数</p>
+<div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>修改为</p>
+<div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;gbk&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>报错改变，提示：</p>
+<div class="highlight"><pre><span></span><span class="go">TypeError: must be str, not bytes</span>
+</pre></div>
+
+
+<p>有进步，继续</p>
+<p><strong>第三步：</strong></p>
+<p>由于我的目的是写入文件</p>
+<p>尝试修改代码</p>
+<div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>为</p>
+<div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>ok，成功</p>
+<p><strong>第四步：</strong></p>
+<p>虽然成功了，但是仍然心存不解。想起w跟我说过他一般都直接读写bytes，于是新的尝试。
+百度一下，才发现，原来str.encode()返回的是bytes，而bytes.decode()方法返回的是string</p>
+<div class="highlight"><pre><span></span><span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<pre>
+Return an encoded version of the string as a bytes object. 
+Default encoding is 'utf-8'.
+</pre>
+
+<div class="highlight"><pre><span></span><span class="nb">bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span>
+<span class="nb">bytearray</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<pre>Return a string decoded from the given bytes. 
+Default encoding is 'utf-8'. </pre>
+
+<h3>Finally 策略</h3>
+<p>不直接读写str，将所有读写内容都更改为bytes。</p>
+<p>代码修改为：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">urlstr</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1">#content是bytes</span>
+<span class="n">return_content</span> <span class="o">=</span> <span class="n">string_process_func</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>   
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">return_content</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>又涨姿势鸟~</p>
+<p>参考：</p>
+<ol>
+<li><a href="http://docs.python.org/3.2/library/stdtypes.html#str.encode">python3 document str.encode</a></li>
+<li><a href="http://docs.python.org/3.2/library/stdtypes.html#bytes.decode">python3 document bytes.decode</a></li>
+</ol>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">
+                            真是不能愉快地码字了
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/links/2016/07-31-statics-links/">
+                            Statics Links
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/review/2016/07-31-2016-07-31/">
+                            2016-07-31
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2016/07-31-pelican-cheet-list/">
+                            Pelican Cheet List
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../../../posts/blog/2014/05-11-ling-ling-sui-sui/">
+                            零零碎碎
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Lei Li
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../../../../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../../../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../../../../theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

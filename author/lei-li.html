@@ -16,16 +16,17 @@
         <meta property="og:site_name" content="SciLife" />
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="SciLife"/>
-        <meta property="og:url" content=""/>
+        <meta property="og:url" content=".."/>
         <meta property="og:description" content="SciLife"/>
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+        <link href="../static/custom.css" rel="stylesheet">
 
 
 
@@ -43,22 +44,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">
+            <a href="../" class="navbar-brand">
 SciLife            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="/pages/about.html">
+                         <li><a href="../pages/about.html">
                              About
                           </a></li>
                         <li >
-                            <a href="/category/blog.html">Blog</a>
+                            <a href="../category/blog.html">Blog</a>
                         </li>
                         <li >
-                            <a href="/category/links.html">Links</a>
+                            <a href="../category/links.html">Links</a>
                         </li>
                         <li >
-                            <a href="/category/review.html">Review</a>
+                            <a href="../category/review.html">Review</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -73,27 +74,188 @@ SciLife            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a href="/statics-links.html">Statics Links</a></h2>
+                <h2><a href="../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">真是不能愉快地码字了</a></h2>
+                <div class="summary"><p>博客搬迁小记</p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/links/2016/07-31-statics-links/">Statics Links</a></h2>
                 <div class="summary"><p>Some interesting links</p>
-                    <a class="btn btn-default btn-xs" href="/statics-links.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="../posts/links/2016/07-31-statics-links/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/2016-07-31.html">2016-07-31</a></h2>
+                <h2><a href="../posts/review/2016/07-31-2016-07-31/">2016-07-31</a></h2>
                 <div class="summary"><p>A summary for this week growth</p>
-                    <a class="btn btn-default btn-xs" href="/2016-07-31.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="../posts/review/2016/07-31-2016-07-31/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/pelican-cheet-list.html">Pelican Cheet List</a></h2>
+                <h2><a href="../posts/blog/2016/07-31-pelican-cheet-list/">Pelican Cheet List</a></h2>
                 <div class="summary"><p>There are some links to quick start pelican.</p>
-                    <a class="btn btn-default btn-xs" href="/pelican-cheet-list.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2016/07-31-pelican-cheet-list/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/05-11-ling-ling-sui-sui/">零零碎碎</a></h2>
+                <div class="summary"><p>看着以前写的狗一样的Python代码，痛定思痛，改。</p>
+<p>1.CocoCat加入配置文件，代码重新整理。</p>
+<p>真是没有压力就没有动力。</p>
+<p>2.学一下R语言的回归函数，python做回归还是有点小压力。</p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/05-11-ling-ling-sui-sui/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/">Python3在Windows下f.write()方法编码问题</a></h2>
+                <div class="summary"><p>之前由于windows下的编码问题，转用unbutu系统。
+今天由于必须使用windows server运行程序，又开始尝试解决编码问题。
+<!-- break --></p>
+<p>报错提示：</p>
+<div class="highlight"><pre><span></span><span class="go">UnicodeEncodeError: &#39;gbk&#39; codec can&#39;t encode character &#39;\xa0&#39; in position 967: </span>
+<span class="go">illegal multibyte sequence</span>
+</pre></div>
+
+
+<p>出错代码：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">urlstr</span><span class="p">)</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write ...</span></pre></div></td></tr></table>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/02-07-jekylltian-jia-nei-bu-lian-jie/">Jekyll添加内部链接</a></h2>
+                <div class="summary"><p>问题：在文章中直接添加另一篇文章的链接</p>
+<p>描述：</p>
+<p>由于在markdown里加入链接的时候，由于文章链接是由jekyll生成的，所以无法获知post的相对路径。(虽然根据规则可以推断出，但是万一以后规则改变或者某些变量被修改了，原先写好的路径就会失效)</p>
+<!--break-->
+
+<p>在网上搜了一下，解决办法还是很简单的，在需要插入链接的地方写上。</p>
+<pre><code>&#123;% post_url 2014-02-04-Add-the-Location-Field-for-a-Post %&#125;</code></pre>
+
+<p>格式：</p>
+<div class="highlight"><pre><span></span>post_url 文件名
+</pre></div>
+
+
+<blockquote>
+<p>注意：大小写</p>
+</blockquote>
+<p>PS.<code>{</code>和<code>%</code>没有办法连在一起显示，最后还是直接写html实现的。</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;pre&gt;&lt;code&gt;</span><span class="ni">&amp;#123;</span>% post_url 2014-02-04-Add-the-Location-Field-for-a-Post %<span class="ni">&amp;#125;</span><span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+</pre></div>
+
+
+<p>其中，<code>&amp;#123;</code>和<code>&amp;#125;</code>分别表示<code>{</code>和<code>}</code></p>
+<p>来源：<a href="http://www.v2ex.com/t/93507">github page (Jekyll) 的一些问题</a></p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/02-07-jekylltian-jia-nei-bu-lian-jie/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/02-04-jekyllwen-zhang-zi-dong-xian-shi-xie-zuo-di-dian/">Jekyll文章自动显示写作地点</a></h2>
+                <div class="summary"><p>突然想着能不能自动加个字段显示地点，然后就随便试了一下，竟然成功了。</p>
+<ul>
+<li><a href="#start">启发</a></li>
+<li><a href="#trial-step01">添加location字段</a></li>
+<li><a href="#trial-step02">在文章中显示location</a></li>
+</ul>
+<!--break-->
+
+<h2 id="start">启发</h2>
+<p>在写博客的时候可以预先定义几个字段，比如title，date，layout等</p>
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">Jekyll为文章增加地点字段</span>
+<span class="n">date</span><span class="o">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">04</span> <span class="mi">11</span><span class="o">:</span><span class="mi">22</span><span class="n">AM</span>
+<span class="n">layout</span><span class="o">:</span> <span class="n">post</span>
+</pre></div>
+
+
+<p>我就想着，那我再增加一个地点呗。
+走起~</p>
+<h2 id="trial-step01">添加locatioin字段</h2>
+<p>首先，在yaml的定义里直接加上location:loc
+<pre><code>---<br>title: test <br>date: 2014-02-04 <br>location: loc <br>---</code></pre></p>
+<blockquote>
+<p>PS. 输入三个&minus;可真是费劲...最后还是用直接写html来实现的：</p>
+<p><code>&lt;pre&gt;&lt;code&gt;---&lt;br&gt;title: test&lt;br&gt;date: 2014-02-04&lt;br&gt;location: loc ...</code></p></blockquote></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/02-04-jekyllwen-zhang-zi-dong-xian-shi-xie-zuo-di-dian/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/02-01-windowsshang-an-zhuang-easy_install/">Windows上安装easy_install</a></h2>
+                <div class="summary"><p>第一步，在官网下载<a href="https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py">ez_setup.py</a>文件<a href="https://pypi.python.org/pypi/setuptools#downloads">https://pypi.python.org/pypi/setuptools#downloads</a>，在命令行cmd里编译执行ez_setup.py</p>
+<div class="highlight"><pre><span></span>&gt;python ez_setup.py
+</pre></div>
+
+
+<!--break-->
+
+<p>第二步，在环境变量path里增加个路径</p>
+<div class="highlight"><pre><span></span>C:\python33\scripts
+</pre></div>
+
+
+<p>第三步，利用easy_install安装BeautifulSoup4。在命令行cmd里输入</p>
+<div class="highlight"><pre><span></span>&gt;easy_install beautifulsoup4
+</pre></div>
+
+
+<p>参考链接：</p>
+<ol>
+<li><a href="http://www.cnblogs.com/huangjacky/archive/2012/03/28/2421866.html">python-easy_install的安装和使用</a></li>
+<li><a href="https://pypi.python.org/pypi/setuptools#downloads">setuptool官网</a></li>
+</ol>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/02-01-windowsshang-an-zhuang-easy_install/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2014/01-26-na-xie-shi-er/">那些事儿</a></h2>
+                <div class="summary"><p>今天，总算是把《明朝那些事儿》全部看完了。花了大概4个月的时间（目测是只长不短），搞定了这七本书。
+由于历时时间太长其实很多情节我大多数都忘了，仅从最终的感受谈谈吧。</p>
+<h3>扫一眼</h3>
+<ul>
+<li><a href="#about-book">关于书</a></li>
+<li><a href="#about-ming-dynasty">明朝</a></li>
+</ul>
+<!--break-->
+
+<h2 id="about-book">关于书。</h2>
+<p>文字通俗易懂（这个灰常重要），幽默诙谐。虽然语言简单，但是无法掩盖作者的渊博知识，正史到野史，灰常符合咱的口味。前两本书确实给咱很大的震撼，只能想到震撼这个词，震撼于里面的人物之牛，情节之跌宕起伏，笔者各种网络词汇的运用，给各种赞。唯一纠结的地方，就是作者对里面的人物特别喜欢用一个词——牛人，导致看到第三本书直接就晕了。。。肿么牛人这么多，各种记不住。</p>
+<h2 id="about-ming-dynasty">明朝。</h2>
+<p>历史这厮一直不是咱的涉猎对象。原因有二，一来正如作者前言中所言，学究书故作高深的文章；二来这种东东咱接触得确实少，没有什么概念。</p>
+<p>明朝，富有、强大。想当年朱老四造反，动辄都是几十万大军进行对阵，再看一百多年后，面对倭寇小贼，大明派兵也不过三、五万。这是实力。</p>
+<p>然而 ...</p></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/01-26-na-xie-shi-er/">more ...</a>
                 </div>
             </article>
             <hr/>
 
+        <ul class="pagination">
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a
+                            href="../author/lei-li.html">1</a></li>
+                    <li class=""><a
+                            href="../author/lei-li2.html">2</a></li>
+                <li class="next"><a
+                        href="../author/lei-li2.html">&raquo;</a></li>
+        </ul>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -104,18 +266,28 @@ SciLife            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="/statics-links.html">
+                        <a href="../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">
+                            真是不能愉快地码字了
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/links/2016/07-31-statics-links/">
                             Statics Links
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="/2016-07-31.html">
+                        <a href="../posts/review/2016/07-31-2016-07-31/">
                             2016-07-31
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="/pelican-cheet-list.html">
+                        <a href="../posts/blog/2016/07-31-pelican-cheet-list/">
                             Pelican Cheet List
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2014/05-11-ling-ling-sui-sui/">
+                            零零碎碎
                         </a>
                     </li>
                 </ul>
@@ -146,13 +318,13 @@ SciLife            </a>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+<script src="../theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="../theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<script src="../theme/js/respond.min.js"></script>
 
 
 </body>

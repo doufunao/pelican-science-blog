@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cn" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>'blog' - SciLife</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <meta name="author" content="Lei Li" />
+    <meta name="keywords" content="'blog'" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="SciLife" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="SciLife"/>
+        <meta property="og:url" content=".."/>
+        <meta property="og:description" content="SciLife"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+        <link href="../static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">
+SciLife            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../pages/about.html">
+                             About
+                          </a></li>
+                        <li >
+                            <a href="../category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="../category/links.html">Links</a>
+                        </li>
+                        <li >
+                            <a href="../category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="../posts/blog/2014/02-04-jekyllwen-zhang-zi-dong-xian-shi-xie-zuo-di-dian/">Jekyll文章自动显示写作地点</a></h2>
+                <div class="summary"><p>突然想着能不能自动加个字段显示地点，然后就随便试了一下，竟然成功了。</p>
+<ul>
+<li><a href="#start">启发</a></li>
+<li><a href="#trial-step01">添加location字段</a></li>
+<li><a href="#trial-step02">在文章中显示location</a></li>
+</ul>
+<!--break-->
+
+<h2 id="start">启发</h2>
+<p>在写博客的时候可以预先定义几个字段，比如title，date，layout等</p>
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">Jekyll为文章增加地点字段</span>
+<span class="n">date</span><span class="o">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">04</span> <span class="mi">11</span><span class="o">:</span><span class="mi">22</span><span class="n">AM</span>
+<span class="n">layout</span><span class="o">:</span> <span class="n">post</span>
+</pre></div>
+
+
+<p>我就想着，那我再增加一个地点呗。
+走起~</p>
+<h2 id="trial-step01">添加locatioin字段</h2>
+<p>首先，在yaml的定义里直接加上location:loc
+<pre><code>---<br>title: test <br>date: 2014-02-04 <br>location: loc <br>---</code></pre></p>
+<blockquote>
+<p>PS. 输入三个&minus;可真是费劲...最后还是用直接写html来实现的：</p>
+<p><code>&lt;pre&gt;&lt;code&gt;---&lt;br&gt;title: test&lt;br&gt;date: 2014-02-04&lt;br&gt;location: loc ...</code></p></blockquote></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2014/02-04-jekyllwen-zhang-zi-dong-xian-shi-xie-zuo-di-dian/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/08-14-huan-ying-lai-dao-wo-de-huan-xiang-xiang/">欢迎来到我的幻想乡</a></h2>
+                <div class="summary"><p>花了几天时间，终于把Jekyll搞懂了，最终能够浏览，对于咱这个伪技术来说着实不易。</p>
+<p>搭个博客，一来在调bug的过程中自我娱乐，二来分享一些生活学习心得。</p>
+<p>生无所息</p>
+<p>over</p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/08-14-huan-ying-lai-dao-wo-de-huan-xiang-xiang/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2014/02-04-jekyllwen-zhang-zi-dong-xian-shi-xie-zuo-di-dian/">
+                            Jekyll文章自动显示写作地点
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2013/08-14-huan-ying-lai-dao-wo-de-huan-xiang-xiang/">
+                            欢迎来到我的幻想乡
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Lei Li
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../theme/js/respond.min.js"></script>
+
+
+</body>
+</html>

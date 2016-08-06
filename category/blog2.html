@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="cn" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Blog - SciLife</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <meta name="author" content="Lei Li" />
+    <meta name="keywords" content="Blog" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="SciLife" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="SciLife"/>
+        <meta property="og:url" content=".."/>
+        <meta property="og:description" content="SciLife"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+        <link href="../static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">
+SciLife            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="../pages/about.html">
+                             About
+                          </a></li>
+                        <li class="active">
+                            <a href="../category/blog.html">Blog</a>
+                        </li>
+                        <li >
+                            <a href="../category/links.html">Links</a>
+                        </li>
+                        <li >
+                            <a href="../category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="../posts/blog/2013/10-14-axureshi-yong-xiao-ti-hui-ji-shi-xian-xia-la-cai-dan-xiao-guo/">Axure使用小体会及实现下拉菜单效果</a></h2>
+                <div class="summary"><p>目录
+- <a href="#t0">0 每次都要啰嗦一下</a>
+- <a href="#t1">1 Axure使用体会</a>
+- <a href="#t2">2 利用动态面板(Dynamic Panel)实现下拉菜单(Droplist)效果</a>
+- <a href="#t3">3 效果展示</a>
+- <a href="#t4">4 后记</a></p>
+<h3>0 每次都要啰嗦一下{ #t0 }</h3>
+<p>为了给boss完成任务，最近一直在用Axure做原型（虽然一直被一些骚年吐槽叫画界面233），两个月前一点没接触过，现在也算是有点小心得了，遂记之。</p>
+<!--break-->
+
+<h3>1 Axure使用体会{ #t1 }</h3>
+<p>在接触Axure本人没用过其它的原型设计软件，由于有过一点前端开发的经验。软件刚上手的时候，第一感觉就是，简洁、方便、清晰。对我而言，一些设计让我用得还是很自然舒服的。比如，控件(Widgets)和事件(Events)的名称跟html里是一样的，在拖拉控件的时候可以自动对齐，母板(Master)使得页面在设计的时候让我觉得条理清晰等等。还有，生成规格说明书的功能简直就是救星，哈哈 ...</p></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/10-14-axureshi-yong-xiao-ti-hui-ji-shi-xian-xia-la-cai-dan-xiao-guo/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/09-18-jekyllben-di-pei-zhi-xiao-wen-ti/">Jekyll本地配置小问题</a></h2>
+                <div class="summary"><p>晚上重装系统到win8，然后果断把Jekyll又配置一遍。
+有一步需要将默认的source替换成淘宝的镜像</p>
+<p>输入</p>
+<div class="highlight"><pre><span></span>gem sources --remove https://rubygems.org
+</pre></div>
+
+
+<p>结果提示我</p>
+<div class="highlight"><pre><span></span>source https://rubygems.org not present in cache
+</pre></div>
+
+
+<p>搜了半天网上也有人出现这个问题，不过解决办法基本上都不靠谱。无意中看到一篇文档记录才发现，原来是少打了一个<code>/</code>。。。泪奔</p>
+<p>输入</p>
+<div class="highlight"><pre><span></span>gem sources --remove https://rubygems.org/
+</pre></div>
+
+
+<p>搞定</p>
+<p>综上所述：粗心神马的不可取</p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/09-18-jekyllben-di-pei-zhi-xiao-wen-ti/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/09-07-axuresheng-cheng-de-htmlyuan-xing-ye-mian-liu-lan-fang-fa-ji-qi-yuan-yin-jie-shi/">Axure生成的Html原型页面浏览方法及其原因解释</a></h2>
+                <div class="summary"><h2>目录</h2>
+<ul>
+<li>0    <a href="#c0">原型页面所在文件夹的结构示意图</a></li>
+<li>1    <a href="#c1">无导航浏览原型文件</a></li>
+<li>2    <a href="#c2">有导航浏览原型文件(推荐)</a></li>
+<li>3    <a href="#c3">关于使用360浏览器、搜狗浏览器等浏览器浏览时不能访问start.html或index.html的问题</a></li>
+</ul>
+<!--break-->
+
+<h2 id="c0">0 原型页面所在文件夹的结构示意图</h2>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-06_235128.png" /></p>
+<h2 id="c1">1 无导航浏览原型文件</h2>
+<p>直接双击任意html文件或使用浏览器打开html文件即可查看其内容.</p>
+<h2 id="c2">2 有导航浏览原型文件(推荐)</h2>
+<h3>2.1找到start.html文件</h3>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-07_000431.png" /></p>
+<h3>2.2点击右键-打开方式-Internet Explorer</h3>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-06_235258.png" /></p>
+<h3>2.3在打开的IE浏览器窗口中会出现控件安装的提示，允许阻止的内容即可，如下图所示</h3>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-06_235344.png" /></p>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-06_235418.png" /></p>
+<h3>2.4含导航的页面</h3>
+<p><img alt="How-to-browser-the-start-file" src="/assets/2013-09-06_235611.png" /></p>
+<h2 id="c3">3 关于使用360浏览器、搜狗浏览器等浏览器浏览时不能访问START.HTML或INDEX.HTML的问题</h2>
+<p><em>问题：</em></p>
+<p>如果使用搜狗浏览器或者360浏览器直接打开start.html或index.html文件（直接打开其他页面并不会出现这个问题），会跳转到一个提示页面。页面上会显示Install the Axure RP Extension For ...</p></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/09-07-axuresheng-cheng-de-htmlyuan-xing-ye-mian-liu-lan-fang-fa-ji-qi-yuan-yin-jie-shi/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/08-23-zai-ben-di-an-zhuang-jekyllshi-yu-dao-de-ji-dian-wen-ti/">在本地安装Jekyll时遇到的几点问题</a></h2>
+                <div class="summary"><p>遇到的问题做个记录~</p>
+<h2>1.每修改一次_config.yml文件都要重新运行jekyll serve一次</h2>
+<p>为了实现分页的功能，需要在_config.yml里设置paginate的值，比如</p>
+<div class="highlight"><pre><span></span><span class="n">paginate</span><span class="o">:</span> <span class="mi">10</span>
+</pre></div>
+
+
+<p>表示每页显示十个post</p>
+<h2>2.paginator这个参数只能在index.html里调用</h2>
+<p>还是为了实现分页功能，整了半天才发现这个问题，其实在jekyllrb.com里已有提示(Tips)。</p>
+<!--break-->
+
+<h2>3.如何解决首行空两个格的问题</h2>
+<p>解决办法：修改CSS，找到P的CSS属性定义，加入<code>text-indent: 2em;</code>就ok了。例如：</p>
+<div class="highlight"><pre><span></span><span class="na">.post</span> <span class="no">p</span><span class="err">{</span>
+    <span class="nl">text-indent:</span> <span class="err">2</span><span class="nf">em</span><span class="err">;</span>
+    <span class="err">}</span>
+</pre></div>
+
+
+<h2>4.首页显示摘要的问题</h2>
+<p>1)paginator变量只能用在index.html的页面中</p>
+<p>在Jekyll中生成post列表，主要用的是paginator变量，但是并不是所有页面都可以使用，只有在index.html的页面中才能调用这个变量。当时查了好久，最后发现其实jekyllrb.com上早有提示。生成列表的代码：</p>
+<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for ...</span></pre></div></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/08-23-zai-ben-di-an-zhuang-jekyllshi-yu-dao-de-ji-dian-wen-ti/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/08-21-ru-he-zai-windows-7xia-jin-xing-jekyllben-di-diao-shi/">如何在Windows 7下进行Jekyll本地调试</a></h2>
+                <div class="summary"><h4>目录</h4>
+<ul>
+<li><a href="#background">0 罗罗嗦嗦</a></li>
+<li><a href="#preparation">1 准备</a></li>
+<li><a href="#installation">2 安装Ruby以及Jekyll</a></li>
+<li><a href="#initialization">3 初始化一个网站</a></li>
+<li><a href="#running">4 本地运行</a></li>
+<li><a href="#documents">5 参考文档</a></li>
+</ul>
+<h4 id="background">0 罗罗嗦嗦</h4>
+<blockquote>
+<p>本文适合Ruby小白，第一次用Jekyll建站，能看Html+CSS的孩纸。</p>
+</blockquote>
+<h4 id="preparation">1 准备</h4>
+<ul>
+<li>Windows 7 32位 <em>后面下载的两个软件要注意版本，本文给出的链接都是32位的软件</em></li>
+<li>RubyInstaller <a href="http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.0.0-p247.exe?direct">Ruby 2.0.0-p247</a></li>
+<li>Development Kit <a href="http://rubyforge.org/frs/download.php/76805/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe">DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe</a></li>
+</ul>
+<p>以上两个程序可以到<a href="http://www.rubyinstaller.org/downloads/">官网</a>下载最新版本</p>
+<!--break-->
+
+<h4 id="installation">2 安装Ruby以及Jekyll</h4>
+<h5>第一步 安装Ruby</h5>
+<ul>
+<li>运行Ruby 2.0.0-p247.exe，默认路径是C ...</li></ul></!--break-->
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/08-21-ru-he-zai-windows-7xia-jin-xing-jekyllben-di-diao-shi/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/08-14-huan-ying-lai-dao-wo-de-huan-xiang-xiang/">欢迎来到我的幻想乡</a></h2>
+                <div class="summary"><p>花了几天时间，终于把Jekyll搞懂了，最终能够浏览，对于咱这个伪技术来说着实不易。</p>
+<p>搭个博客，一来在调bug的过程中自我娱乐，二来分享一些生活学习心得。</p>
+<p>生无所息</p>
+<p>over</p>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/08-14-huan-ying-lai-dao-wo-de-huan-xiang-xiang/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/08-11-some-tutorials-for-markdown/">Some Tutorials for Markdown</a></h2>
+                <div class="summary"><ol>
+<li><a href="http://wowubuntu.com/markdown/basic.html">Markdown: Basics （快速入门）</a></li>
+<li><a href="http://daringfireball.net/projects/markdown/basics">GETTING THE GIST OF MARKDOWN’S FORMATTING SYNTAX</a></li>
+</ol>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/08-11-some-tutorials-for-markdown/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../posts/blog/2013/01-01-bo-ke-gong-neng-geng-xin-bei-wang-updates/">博客功能更新备忘 Updates</a></h2>
+                <div class="summary"><ul>
+<li>
+<p>2016-08-03</p>
+<blockquote>
+<ul>
+<li>doufunao.github.io的博文搬迁到lilei.science</li>
+<li>增加插件summary</li>
+<li>解决部分文章的语法兼容问题</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>2016-07-31</p>
+<blockquote>
+<ul>
+<li>换成Pelican的引擎</li>
+<li>托管到Github</li>
+<li>部署到vultr JP的server上</li>
+<li>启用新的域名lilei.science</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<!-- break -->
+
+<ul>
+<li>
+<p>2014-02-10</p>
+<blockquote>
+<ul>
+<li>博客的标题和子标题用变量表示</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>2014-02-04    </p>
+<blockquote>
+<ul>
+<li>添加一个地址字段，可以在博文中自定义写作地点。
+参见: <a href="{% post_url 2014-02-04-Add-the-Location-Field-for-a-Post %}">Jekyll文章自动显示写作地点</a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+                    <a class="btn btn-default btn-xs" href="../posts/blog/2013/01-01-bo-ke-gong-neng-geng-xin-bei-wang-updates/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
+        <ul class="pagination">
+                <li class="prev"><a href="../category/blog.html">&laquo;</a>
+                </li>
+                    <li class=""><a
+                            href="../category/blog.html">1</a></li>
+                    <li class="active"><a
+                            href="../category/blog2.html">2</a></li>
+                <li class="next disabled"><a href="#">&raquo;</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2016/08-03-zhen-shi-bu-neng-yu-kuai-di-ma-zi-liao/">
+                            真是不能愉快地码字了
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2016/07-31-pelican-cheet-list/">
+                            Pelican Cheet List
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2014/05-11-ling-ling-sui-sui/">
+                            零零碎碎
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2014/03-21-python3zai-windowsxia-fwritefang-fa-bian-ma-wen-ti/">
+                            Python3在Windows下f.write()方法编码问题
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../posts/blog/2014/02-07-jekylltian-jia-nei-bu-lian-jie/">
+                            Jekyll添加内部链接
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Lei Li
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="../theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="../theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
