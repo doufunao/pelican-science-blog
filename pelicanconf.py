@@ -9,8 +9,8 @@ CC_LICENSE = 'CC-BY-NC-SA'
 DEFAULT_CATEGORY = 'BlaBla'
 PATH = 'content'
 OUTPUT_PATH = 'output/'
-
 TIMEZONE = 'Asia/Shanghai'
+LOAD_CONTENT_CACHE = False
 
 DEFAULT_LANG = 'cn'
 DEFAULT_DATE = (2016, 7, 13, 12, 1, 1)
