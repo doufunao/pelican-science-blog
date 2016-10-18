@@ -2,6 +2,7 @@ Title: 2016-07-31
 Date: 2016-07-31 12:43
 Category: Review
 Tags: weekly review
+status: draft
 Summary: A summary for this week growth
 
 
