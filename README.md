@@ -1,7 +1,11 @@
 # Requirement
-python,pelican,markdown
+1. python,pelican,markdown
 ```bash
 pip install pelican markdown
+```
+2. retrive pelican-plugins from github into ./pelican-plugins
+```bash
+git clone --recursive https://github.com/getpelican/pelican-plugins
 ```
 # How to generate
 1.Build
